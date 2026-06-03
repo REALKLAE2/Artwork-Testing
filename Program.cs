@@ -1,4 +1,6 @@
-﻿namespace artwork_testing
+﻿using System.ComponentModel.Design;
+
+namespace artwork_testing
 {
     internal class Program
     {
@@ -81,6 +83,121 @@
             Console.WriteLine("                                                                           \r\n                                                                           \r\n                                                                           \r\n                                                                           \r\n                                                    :-.                    \r\n                                              +=@%%%%%%%*                  \r\n                                           +-%%=      --#%-                \r\n                                          ::%%%@#       =#@                \r\n                                          .#%%%%.        :#%               \r\n                                         .+*#%@@#         %%-              \r\n                                         -#%@@%%@*=..     *+%              \r\n                                         -%@@#%%%@@%@@*   #.*+             \r\n                                      .:.*@@@%%@%%%%@@@=  * :*             \r\n                                    -*#%#=%@%%#+#%@@@@@%  *  *             \r\n                                  - +#%@@%#%@@@@@@%@@@@%  #  -             \r\n                                :% =##@@%%%%%%%##%@@@@@%  #                \r\n                              =#%:.%%@@@%@%#%%@%#%@@@@@@* %                \r\n                            =%%%%:+%@%%@@@%@%%%%%%%@@@@@*#%*               \r\n                           *%%%%%++%@@@@@@@@#%@%%@@@%@@#=+%%%=             \r\n                         +==  -%@%+%@%@%%@@@@%%@@@@%@@%@+*#@@#             \r\n                              +%%%#@@%@@@%@@@@%@%@@@%@%%##%%%%             \r\n                             #%%%%:@%@@@@%@@@@@@@@ %   +%@@%@+             \r\n                        .=#%%%%%##=%%@@@@@@@@@@@@@      =%@@@              \r\n                      -#@%##%###--#%%@@@@%@@@@@@@@.      -%*               \r\n                    -:          +-*%%@@@@@@@@@@@@@@-   :%@@@%              \r\n                  .            +#*%%%@@@@@@@@@@@@@@@@##%%@@@               \r\n                .             *+*+%%@@%@@%%%##@@@@@@%@  *@@%-              \r\n                             *%%%%%@@%%%%@@@@@%@@@@@@@%=%%@@-              \r\n                            ##*+%@@%@@%@%%%@@@@@@@@@@@@%%@@@:              \r\n                          +###%%%%@#@@@@@@@@@@@@@@@@@@@@%#@@:              \r\n                        +#%%#*##%@@#%@@@@@@@@@@@@@@@@@@@#*@@+              \r\n                     -%@@@%#-#%%%%@@%@@@@@@@@@@@@@@@@@@@#*@@#*             \r\n                 =+= =*@@@@##@%%%@@@@%@@@@@@@@@@@@@@@@@@%#%@@%-            \r\n               +      %%@@%*@%+%%@@@@%@@@% .@%@@@@@@@@@@@%%@@@@*           \r\n                     -%@%@*@@#@%%@@@@@@@@#  @@@@@@@@@@@@%%%%%%%#           \r\n                    -#@@@@%@@%#%@@@@@@@%@%  @@@@@@@@@@@@%%@@@@@@@.         \r\n                   =%@@@@@@%#%%@@@@@@@@%%@+ :-@@@@@@@@@@@@@@@@@@@+         \r\n                -%%@@@@#@@@%#*@@@@@@@@%%%%@   +@@@@@@@@@@@@@@@@@@@-        \r\n          .-**%@@@@@@#  %@%@@@@@@@@@@%@%%#:+  *@@@@@@@@@@@@@@@@@@@@:       \r\n        =%@@@@@@@@@#   +@:%@@@@@@@%*%%%#-#:   #@@%=*@@@@@@@@@@@@@@%        \r\n       #@@@@@@@@@@.    =  :@@@%%@@   @+% #     .  =%@@@@@@@@@@@#           \r\n     :#@@@@@@@@@%         @@@@%@@.     % =       .%@@@@@@@@@@@             \r\n     ##%@@@@@@@@:        -@@@@@@=      #         =@@% .@@@@@=              \r\n     #%%##@@@@%+         @@@@@@:                **::  .@@@@@               \r\n     ##= #%:             @@@@@%                       -@@@@%               \r\n      : +#              *@@@@.                       -%@%%@%               \r\n        =:              %@@@@                        #@@%%@%               \r\n        .               #%%%                           +@@@%               \r\n                        *#%#                            %%%#=              \r\n                        *##                              *#.               \r\n                       ###%                              -*                \r\n                      =*#%+                               *                \r\n                      *##%%                               =                \r\n                      :#*                                                  \r\n                                                                           ");
 
         }
+        public static void Map() 
+        {
+            string temp, wanted;
+            Console.WriteLine("Which map would you like to access? \nYou have access to the full game's map, or you can see what you have unlocked so far");
+            Console.Write("Say 'Full' or 'Progress' to access the map you would like: "); temp = Console.ReadLine();
+
+            wanted = temp.ToLower();
+
+            if (wanted == "full")
+                Console.WriteLine(@"
+              ╔═══════════════════════════╗
+              ║       FULL GAME MAP       ║
+              ╚═══════════════════════════╝
+
+
+                  =====================
+                  || BONFIRE MEADOW ||
+                  =====================
+                          ||
+                          ||
+                          ||
+                          ||                        
+                 =====================
+                 || RUINED COURTYARD ||
+                 =====================
+                          ||
+                          ||
+                          \/
+                 =====================
+                 ||  CATHEDRAL HALL ||
+                 =====================
+                          ||
+                          ||
+                          ||
+                          \/
+                 =====================
+                 ||  SHATTERD PEAKS ||
+                 =====================
+                          ||
+                          ||
+                          ||
+                          \/
+                 =====================
+                ||      CASTLE       ||
+                 =====================
+            ");
+
+            else if (wanted == "progress")
+            {
+                Console.WriteLine(@"                        ╔═══════════════════════════╗
+                                                            ║     PROGRESS GAME MAP     ║
+                                                            ╚═══════════════════════════╝
+
+
+                  =====================
+                  || BONFIRE MEADOW  ||
+                  =====================
+                          ||
+                          ||
+                          ||
+                          ||                        
+                 =====================
+                 || RUINED COURTYARD ||
+                 =====================
+                          ||
+                          ||
+                          \/
+                 =====================
+                 ||  CATHEDRAL HALL ||
+                 =====================
+                          ||
+                          ||
+                          ||
+                          \/
+                 =====================
+                 ||  SHATTERD PEAKS ||
+                 =====================
+                          ||
+                          ||
+                          ||
+                          \/
+                 =====================
+                ||      CASTLE       ||
+                 =====================
+                ");
+
+            }
+            else if (wanted == "help") //help section for maps.
+            {
+                Console.Clear();
+                Console.WriteLine("This could help you....\n");
+                Console.WriteLine("Full : Accesses the full game's map, this shows all the diffrent game levels\n");
+                Console.WriteLine("Progress : Accesses the progressive map of the game, this show what you have unlocked so far\n");
+                
+                Console.WriteLine("When your ready to try again just press <ENTER>"); Console.ReadLine();
+                Console.Clear();
+                Map();
+            }
+
+            else //invaild input to maps().
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    Console.Clear();
+                    Console.WriteLine("  ___                 _ _     _    ___        _   _                    __\r\n |_ _|_ ____   ____ _(_) | __| |  / _ \\ _ __ | |_(_) ___  _ __    _   / /\r\n  | || '_ \\ \\ / / _` | | |/ _` | | | | | '_ \\| __| |/ _ \\| '_ \\  (_) | | \r\n  | || | | \\ V / (_| | | | (_| | | |_| | |_) | |_| | (_) | | | |  _  | | \r\n |___|_| |_|\\_/ \\__,_|_|_|\\__,_|  \\___/| .__/ \\__|_|\\___/|_| |_| (_) | | \r\n                                       |_|                            \\_\\");
+                    Thread.Sleep(1500);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                }
+
+                Map();
+            }
+
+        }
+
 
         static void Main()
         {
@@ -102,6 +219,7 @@
             AbyswalkerFalls();
             AWArt();
             Console.WriteLine("\n");
+            Map();
             Console.WriteLine("\n");
             Console.WriteLine("\n");
             Console.ReadLine();
